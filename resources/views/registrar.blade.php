@@ -14,7 +14,7 @@
         </div>
         <div class="form-group">
             <label for="senha">Senha</label>
-            <input type="password" name="password" class="form-control" id="password" placeholder="Password">
+            <input type="password" name="senha" class="form-control" id="senha" placeholder="Senha">
         </div>
         <div class="form-group">
             <label for="contato">Contato</label>
@@ -23,4 +23,4 @@
         <button type="submit" class="btn btn-primary">Registrar</button>
     </form>
 </div>
-@stop"
+@stop

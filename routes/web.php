@@ -26,3 +26,5 @@ Route::get('/editar/{nome}', 'RestaController@editar');
 Route::post('editar', 'RestaController@editado');
 Route::view('/registrar', 'registrar');
 Route::post('/registrar', 'RestaController@registrar');
+Route::view('/login', 'login');
+Route::post('/login', 'RestaController@entrar');

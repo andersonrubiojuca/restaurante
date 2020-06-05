@@ -28,17 +28,18 @@
                     <li class="nav-item">
                         <a class="nav-link" href="#">Procurar</a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Entrar</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="/registrar">Registrar</a>
-                    </li>
-                    @if(Session::put('usuario'))
+                    @if(Session::get('usuario'))
                         <li class="nav-item">
                             <span class="navbar-text">
-                                {{(Session::put('usuario')}}
+                                Bem Vindo {{Session::get('usuario')}}
                             </span>
+                        </li>
+                    @else
+                        <li class="nav-item">
+                            <a class="nav-link" href="/login">Entrar</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/registrar">Registrar</a>
                         </li>
                     @endif
                     </ul>
