@@ -22,18 +22,22 @@
                     <li class="nav-item">
                         <a class="nav-link" href="/lista">Lista</a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="/adicionar">Adicionar</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Procurar</a>
-                    </li>
                     @if(Session::get('usuario'))
+                        <li class="nav-item">
+                            <a class="nav-link" href="/adicionar">Adicionar</a>
+                        </li>
+                    </ul>
+
+                    <ul class="navbar-nav ml-md-auto">
                         <li class="nav-item">
                             <span class="navbar-text">
                                 Bem Vindo {{Session::get('usuario')}}
                             </span>
                         </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/sair">Sair</a>
+                        </li>
+	                </ul>
                     @else
                         <li class="nav-item">
                             <a class="nav-link" href="/login">Entrar</a>
@@ -49,8 +53,5 @@
         <main class="container">
             @yield('conteudo')
         </main>
-        <footer>
-            ®Feito por Anderson Juca
-        </footer>
     </body>
 </html>

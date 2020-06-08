@@ -5,9 +5,9 @@ Restaurante É um projeto feito usando php 7, lavarel 7 e mysql, ele tem o objet
 ## Para instalar
 
 - Use o fork para te-lo em seu sistema,
-- importe o banco de dados mysql.sql,
-- Configure o .env para com o seu banco de dados,
-- Caso queia entrar use: email = admin@test.com e senha = 123456
+- importe como um projeto laravel (dúvidas: usar.ml/wd7oh ),
+- importe o banco de dados restaurante.sql,
+- Caso queia entrar na conta padrão use: email = admin@test.com e senha = 123456
 
 ## Creditos
 

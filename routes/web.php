@@ -17,14 +17,19 @@ use Illuminate\Support\Facades\Route;
 //     return view('welcome');
 // });
 
+Route::group(['middleware' => "auth"], function(){
+    Route::view('/adicionar', 'adicionar');
+    Route::post('/adicionar', 'RestaController@adicionar');
+    Route::get('/deletar/{nome}', 'RestaController@deletar');
+    Route::get('/editar/{nome}', 'RestaController@editar');
+    Route::post('editar', 'RestaController@editado');
+    Route::get('/sair', 'Admin@sair');
+    
+});
+
 Route::get('/', 'RestaController@index');
 Route::get('/lista', 'RestaController@lista');
-Route::view('/adicionar', 'adicionar');
-Route::post('/adicionar', 'RestaController@adicionar');
-Route::get('/deletar/{nome}', 'RestaController@deletar');
-Route::get('/editar/{nome}', 'RestaController@editar');
-Route::post('editar', 'RestaController@editado');
-Route::view('/registrar', 'registrar');
-Route::post('/registrar', 'RestaController@registrar');
 Route::view('/login', 'login');
-Route::post('/login', 'RestaController@entrar');
+Route::post('/login', 'Admin@entrar');
+Route::view('/registrar', 'registrar');
+Route::post('/registrar', 'Admin@registrar');
